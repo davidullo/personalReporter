@@ -77,3 +77,12 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+*::selection {
+  background: pink; /* WebKit/Blink Browsers */
+  color: black;
+}
+*::-moz-selection {
+  background: pink; /* Gecko Browsers */
+  color: black;
+}
