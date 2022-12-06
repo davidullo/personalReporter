@@ -123,6 +123,7 @@ main {
   top: -120px;
   left: 10px;
   font-size: 3rem;
+  animation: fadeinSlideup 1s;
 }
 
 .articles {
@@ -148,6 +149,27 @@ main {
   width: 100%;
   padding: 1rem;
   padding-inline: 2rem;
+  animation: fadein 0.5s;
+  font-size: 0.9rem;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeinSlideup {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .articles__1 {
