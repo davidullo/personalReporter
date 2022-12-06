@@ -47,6 +47,18 @@ p,
   width: 70%;
   //   background-color: lightgray;
   padding: 2rem;
+  animation: blurIn 1.5s;
+}
+
+@keyframes blurIn {
+  0% {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
 }
 
 .header__snippet {
@@ -126,6 +138,9 @@ main {
   left: 10px;
   font-size: 3rem;
   animation: fadeinSlideup 1s;
+  span {
+    font-size: 1.2rem;
+  }
 }
 
 .articles {
@@ -151,7 +166,7 @@ main {
   width: 100%;
   padding: 1rem;
   padding-inline: 2rem;
-  animation: fadein 0.5s;
+  animation: fadein 1s;
   font-size: 0.9rem;
   transition: all 0.2s ease-in-out;
   a {
