@@ -151,6 +151,17 @@ main {
   padding-inline: 2rem;
   animation: fadein 0.5s;
   font-size: 0.9rem;
+  transition: all 0.2s ease-in-out;
+  a {
+    color: black;
+  }
+  &:hover {
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+  }
+  &:hover a {
+    color: hsl(0, 0%, 100%);
+  }
 }
 
 @keyframes fadein {
@@ -206,7 +217,6 @@ main {
 .articles__title {
   a {
     text-decoration: none;
-    color: black;
     &:hover {
       text-decoration: underline;
     }
@@ -225,7 +235,6 @@ main {
 .articles__comments {
   a {
     text-decoration: none;
-    color: black;
     &:hover {
       text-decoration: underline;
     }
