@@ -33,32 +33,37 @@
     </div>
   </nav>
   <main>
-    <div class="articles">
-      <div
-        class="article articles__{{ i + 1 }}"
-        *ngFor="let story of storyLinks; let i = index"
-      >
-        <div class="articles__title">
-          <h2>
-            <a
-              href="https://news.ycombinator.com/item?id={{ story.id }}"
-              target="_blank"
-              >{{ story.title }}</a
-            >
-          </h2>
-        </div>
-        <div class="articles__options">
-          <div class="articles__score">
-            <p><i class="bi bi-caret-up-fill"></i> {{ story.score }}</p>
-          </div>
-          <div class="articles__comments">
-            <p>
+    <div class="wrapper__hackerNews">
+      <div class="articles__header">
+        <h1>Hacker News.</h1>
+      </div>
+      <div class="articles">
+        <div
+          class="article articles__{{ i + 1 }}"
+          *ngFor="let story of storyLinks; let i = index"
+        >
+          <div class="articles__title">
+            <h2>
               <a
                 href="https://news.ycombinator.com/item?id={{ story.id }}"
                 target="_blank"
-                >{{ story.descendants }} <em>comments</em></a
+                >{{ story.title }}</a
               >
-            </p>
+            </h2>
+          </div>
+          <div class="articles__options">
+            <div class="articles__score">
+              <p><i class="bi bi-caret-up-fill"></i> {{ story.score }}</p>
+            </div>
+            <div class="articles__comments">
+              <p>
+                <a
+                  href="https://news.ycombinator.com/item?id={{ story.id }}"
+                  target="_blank"
+                  >{{ story.descendants }} <em>comments</em></a
+                >
+              </p>
+            </div>
           </div>
         </div>
       </div>

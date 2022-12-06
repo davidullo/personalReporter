@@ -114,15 +114,29 @@ p,
 
 /* **** MAIN  **** */
 
+main {
+  position: relative;
+}
+
+.articles__header {
+  position: absolute;
+  top: -120px;
+  left: 10px;
+  font-size: 3rem;
+}
+
 .articles {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 12rem);
-  background-color: black;
   grid-gap: 0.125rem;
   grid-template-areas:
     "a b c d e"
     "f g h i j";
+  background-color: black;
+  margin-top: 8rem;
+  border-top: 0.125rem solid black;
+  border-bottom: 0.125rem solid black;
 }
 
 .article {
