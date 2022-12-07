@@ -143,10 +143,10 @@ p,
   display: flex;
   padding-block: 1rem;
   animation: scroll 28s linear infinite;
-  width: calc(250px * 14);
+  width: calc(150px * 24);
   .slide {
     text-align: center;
-    width: 250px;
+    width: 150px;
   }
 }
 
@@ -155,7 +155,7 @@ p,
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-150px * 12));
   }
 }
 
@@ -363,6 +363,6 @@ main {
   }
 
   .articles__options {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
