@@ -67,7 +67,11 @@
               <a
                 href="https://news.ycombinator.com/item?id={{ story.id }}"
                 target="_blank"
-                >{{ story.title }}.</a
+                >{{
+                  story.title.length > 6
+                    ? (story.title | slice : 0 : 80) + "..."
+                    : story.title + "."
+                }}</a
               >
             </h2>
           </div>
