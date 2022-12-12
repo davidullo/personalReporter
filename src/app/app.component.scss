@@ -28,7 +28,7 @@ p,
   @include centerAbsolute;
   position: relative;
   outline: 2px solid black;
-  // overflow: scroll;
+  overflow-y: scroll;
   width: 90%;
   height: 90%;
   box-shadow: inset 0px 40px 50px -30px rgb(0, 0, 0),
