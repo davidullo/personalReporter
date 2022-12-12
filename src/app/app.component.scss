@@ -28,7 +28,7 @@ p,
   @include centerAbsolute;
   position: relative;
   outline: 2px solid black;
-  overflow: scroll;
+  // overflow: scroll;
   width: 90%;
   height: 90%;
   box-shadow: inset 0px 40px 50px -30px rgb(0, 0, 0),
@@ -358,7 +358,7 @@ main {
 
 @media screen and (max-width: 1920px) {
   .article {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
 }
 
@@ -400,7 +400,7 @@ main {
       "e f"
       "g h"
       "i j";
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .articles__header {
