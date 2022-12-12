@@ -30,14 +30,13 @@ export class AppComponent {
     'cardano',
   ];
   cryptoData: Crypto[] = [];
+  subreddit: string = '';
 
   constructor(private requests: RequestsService) {}
 
   ngOnInit() {
     this.showNews();
     this.getCurrenciesID();
-    console.log(this.cryptoData);
-    this.showSubreddit('cscareerquestionseu', 20, 'month');
   }
 
   showNews() {
@@ -72,5 +71,11 @@ export class AppComponent {
     this.requests.getSubreddit(sub, numOfPosts, time).subscribe((data: any) => {
       console.log(data);
     });
+  }
+
+  onKeydown(event: any) {
+    if (event.key === 'Enter') {
+      this.showSubreddit(this.subreddit, 10, 'month');
+    }
   }
 }

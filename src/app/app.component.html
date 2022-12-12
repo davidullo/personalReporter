@@ -65,7 +65,11 @@
           <div class="articles__title">
             <h2>
               <a
-                href="https://news.ycombinator.com/item?id={{ story.id }}"
+                href="{{
+                  story.url != null
+                    ? story.url
+                    : 'https://news.ycombinator.com/item?id=' + story.id
+                }}"
                 target="_blank"
                 >{{
                   story.title.length > 64
@@ -92,7 +96,13 @@
         </div>
       </div>
     </div>
-    <div class="wrapper__reddit"></div>
+    <div class="wrapper__reddit">
+      <input
+        type="text"
+        [(ngModel)]="subreddit"
+        (keydown)="onKeydown($event)"
+      />
+    </div>
   </main>
   <footer></footer>
 </div>
