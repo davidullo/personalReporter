@@ -69,7 +69,8 @@ p,
 .header__logo {
   width: 70%;
   //   background-color: lightgray;
-  padding: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
   animation: blurIn 1.5s;
 }
 
@@ -370,6 +371,7 @@ main {
 
   .header__logo {
     width: 100%;
+    // padding-inline: 3rem;
   }
   .header__img {
     h1 {
