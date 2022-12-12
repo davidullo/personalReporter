@@ -31,11 +31,14 @@ p,
   // overflow-y: scroll;
   width: 90%;
   height: 90%;
-  box-shadow: inset 0px 40px 50px -30px rgb(0, 0, 0),
+  box-shadow: 
+  // inset 0px 40px 50px -30px rgb(0, 0, 0),
     0px 0px 20px 0px hsl(34 50% 30%);
-  -moz-box-shadow: inset 0px 40px 50px -30px rgb(0, 0, 0),
+  -moz-box-shadow: 
+  // inset 0px 40px 50px -30px rgb(0, 0, 0),
     0px 0px 20px 0px hsl(34 50% 30%);
-  -webkit-box-shadow: inset 0px 40px 50px -30px rgb(0, 0, 0),
+  -webkit-box-shadow: 
+  // inset 0px 40px 50px -30px rgb(0, 0, 0),
     0px 0px 20px 0px hsl(34 50% 30%);
   border-bottom-left-radius: 25px;
   border-top-right-radius: 25px;
