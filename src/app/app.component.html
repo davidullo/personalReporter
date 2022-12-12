@@ -96,13 +96,8 @@
         </div>
       </div>
     </div>
-    <div class="wrapper__reddit">
-      <input
-        type="text"
-        [(ngModel)]="subreddit"
-        (keydown)="onKeydown($event)"
-      />
-    </div>
+    <div class="wrapper__reddit"></div>
   </main>
   <footer></footer>
 </div>
+<input type="text" [(ngModel)]="subreddit" (keydown)="onKeydown($event)" />
