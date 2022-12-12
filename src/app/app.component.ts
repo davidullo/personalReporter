@@ -37,6 +37,7 @@ export class AppComponent {
     this.showNews();
     this.getCurrenciesID();
     console.log(this.cryptoData);
+    this.showSubreddit('cscareerquestionseu', 20, 'month');
   }
 
   showNews() {
@@ -64,6 +65,12 @@ export class AppComponent {
   showCurrencies(id: string) {
     this.requests.getCurrencies(id).subscribe((data: any) => {
       this.cryptoData.push(data);
+    });
+  }
+
+  showSubreddit(sub: string, numOfPosts: number, time: string) {
+    this.requests.getSubreddit(sub, numOfPosts, time).subscribe((data: any) => {
+      console.log(data);
     });
   }
 }

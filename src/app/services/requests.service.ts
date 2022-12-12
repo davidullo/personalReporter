@@ -10,6 +10,7 @@ export class RequestsService {
   topStoriesURL = 'https://hacker-news.firebaseio.com/v0/topstories.json';
   storyDetailsURL = 'https://hacker-news.firebaseio.com/v0/item/';
   coingeckoURL = 'https://api.coingecko.com/api/v3/coins/';
+  redditURL = 'https://www.reddit.com/r/';
 
   constructor(private http: HttpClient) {}
 
@@ -23,5 +24,11 @@ export class RequestsService {
 
   getCurrencies(id: string) {
     return this.http.get(this.coingeckoURL + id);
+  }
+
+  getSubreddit(sub: string, numOfPosts: number, time: string) {
+    return this.http.get(
+      this.redditURL + sub + '/top.json?limit=' + numOfPosts + '&t=' + time
+    );
   }
 }
