@@ -9,6 +9,7 @@ import { catchError, retry } from 'rxjs/operators';
 export class RequestsService {
   topStoriesURL = 'https://hacker-news.firebaseio.com/v0/topstories.json';
   storyDetailsURL = 'https://hacker-news.firebaseio.com/v0/item/';
+  coingeckoURL = 'https://api.coingecko.com/api/v3/coins/';
 
   constructor(private http: HttpClient) {}
 
@@ -16,7 +17,11 @@ export class RequestsService {
     return this.http.get(this.topStoriesURL);
   }
 
-  getStory(id: any) {
+  getStory(id: number) {
     return this.http.get(this.storyDetailsURL + id + '.json');
+  }
+
+  getCurrencies(id: string) {
+    return this.http.get(this.coingeckoURL + id);
   }
 }

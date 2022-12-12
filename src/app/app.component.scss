@@ -158,12 +158,43 @@ p,
 
 .slider__content {
   display: flex;
-  padding-block: 1rem;
-  animation: scroll 28s linear infinite;
+  align-items: center;
+  padding-block: 0.9rem;
+  animation: scroll 36s linear infinite;
   width: calc(150px * 24);
-  .slide {
-    text-align: center;
-    width: 150px;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 150px;
+  height: 30px;
+}
+
+.slider__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slider__text {
+  font-size: 0.9rem;
+  letter-spacing: -0.1rem;
+  text-align: center;
+}
+
+.slider__price {
+  font-size: 0.9rem;
+  letter-spacing: -0.1rem;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.slider__img {
+  img {
+    filter: grayscale(100%);
+    height: 30px;
   }
 }
 

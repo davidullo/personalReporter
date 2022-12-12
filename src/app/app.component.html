@@ -26,30 +26,28 @@
     <div class="slider">
       <div class="slider__top"></div>
       <div class="slider__content">
-        <div class="slide">Prova 1</div>
-        <div class="slide">Prova 2</div>
-        <div class="slide">Prova 3</div>
-        <div class="slide">Prova 4</div>
-        <div class="slide">Prova 5</div>
-        <div class="slide">Prova 6</div>
-        <div class="slide">Prova 7</div>
-        <div class="slide">Prova 8</div>
-        <div class="slide">Prova 9</div>
-        <div class="slide">Prova 10</div>
-        <div class="slide">Prova 11</div>
-        <div class="slide">Prova 12</div>
-        <div class="slide">Prova 1</div>
-        <div class="slide">Prova 2</div>
-        <div class="slide">Prova 3</div>
-        <div class="slide">Prova 4</div>
-        <div class="slide">Prova 5</div>
-        <div class="slide">Prova 6</div>
-        <div class="slide">Prova 7</div>
-        <div class="slide">Prova 8</div>
-        <div class="slide">Prova 9</div>
-        <div class="slide">Prova 10</div>
-        <div class="slide">Prova 11</div>
-        <div class="slide">Prova 12</div>
+        <div class="slide" *ngFor="let crypto of cryptoData">
+          <div class="slider__img">
+            <img src="{{ crypto.image.large }}" alt="" />
+          </div>
+          <div class="slider__info">
+            <div class="slider__text">{{ crypto.name }}</div>
+            <div class="slider__price">
+              {{ crypto.market_data.current_price.usd }} USD
+            </div>
+          </div>
+        </div>
+        <div class="slide" *ngFor="let crypto of cryptoData">
+          <div class="slider__img">
+            <img src="{{ crypto.image.large }}" alt="" />
+          </div>
+          <div class="slider__info">
+            <div class="slider__text">{{ crypto.name }}</div>
+            <div class="slider__price">
+              {{ crypto.market_data.current_price.usd }} USD
+            </div>
+          </div>
+        </div>
       </div>
       <div class="slider__bottom"></div>
     </div>
